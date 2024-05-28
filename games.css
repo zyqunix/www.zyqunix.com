@@ -53,6 +53,7 @@ a {
 .aboutTop:hover, .contactTop:hover, .gamesTop:hover {
     text-decoration: underline;
     cursor: pointer;
+    background-color: rgb(50,50,50);
 }
 
 .aboutTop:active, .contactTop:active, .gamesTop:active {
@@ -129,7 +130,7 @@ a {
 }
 
 .gameName {
-    font-size: 1.4em;
+    font-size: 1.4vw;
     margin-top: 0.75em;
     text-decoration: underline;
 }
@@ -138,6 +139,9 @@ a {
     margin-top: 1em;
     width: 14em;
     height: 14em;
+    user-select: none;
+    border-radius: 0.75em;
+    pointer-events: all;
 }
 
 .gameDescription {
@@ -148,5 +152,27 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-size-adjust: auto;
+    font-size: clamp(0.75em, 1.2vw, 1em);
+}
+
+.gamePlay {
+    position: fixed;
+    width: 10em;
+    height: 3em;
+    background-color: rgb(0, 197, 95);
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8.5em;
+    margin-top: 11em;
+    transition: 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.gamePlaySVG {
+    width: 3em;
+    height: 3em;
+    position: absolute;
 }
