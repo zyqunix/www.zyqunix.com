@@ -9,11 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-.bgimg {
-    width: 100%;
-    position: fixed;
-    background-repeat: repeat-y;
-}
 
 .topBar {
     text-align: center;
@@ -24,9 +19,10 @@ body {
     backdrop-filter: blur(10px);
     margin: 0;
     display: flex;
-    gap: 3em;
+    gap: 1em;
     font-size: 1em;
     z-index: 9999999999;
+    line-height: 5em;
 }
 
 a {
@@ -43,11 +39,11 @@ a {
     border: 2px solid rgb(50,50,50);
     border-radius: 0.5em;
     width: 10em;
-    gap: 1em;
     height: 50%;
     background-color: rgb(60,60,60);
     color: white;
     pointer-events: all;
+    font-size: 1em;
 }
 
 .aboutTop:hover, .contactTop:hover, .gamesTop:hover {
@@ -57,7 +53,15 @@ a {
 }
 
 .aboutTop:active, .contactTop:active, .gamesTop:active {
-    scale: 0.98;
+    scale: 0.99;
+}
+
+.logoIMG {
+    display: flex;
+    width: 4em;
+    height: 4em;
+    transform: translateY(0.5em);
+    border-radius: 50%;
 }
 
 .searchMain {
@@ -65,7 +69,7 @@ a {
     height: 100%;
     display: flex;
     margin-top: 1em;
-    margin-left: 65em;
+    margin-left: 67.5em;
     position: absolute;
 }
 
@@ -98,18 +102,27 @@ a {
     border: none;
     cursor: pointer;
     overflow-y: hidden;
-    width: 6em;
+    width: 3em;
     line-height: 1em;
 }
 
-.searchButton .searchSVG {
+.searchButton:hover {
+    background-color: rgb(138, 43, 226);
+}
+
+.searchButton:active .searchSVG {
+    scale: 0.99;
+}
+
+.searchSVG {
     position: absolute;
     margin-top: -1em;
     pointer-events: none;
+    margin-left: -1em;
 }
 
 .gamesMain {
-    margin-top: 10em;
+    margin-top: 7.5em;
     width: 100%;
     height: 100%;
     display: flex;
@@ -141,14 +154,14 @@ a {
     height: 14em;
     user-select: none;
     border-radius: 0.75em;
-    pointer-events: all;
+    pointer-events: none;
 }
 
 .gameDescription {
-    margin-top: 1em;
+    margin-top: 4em;
     margin-left: 1em;
     width: 90%;
-    height: 7em;
+    height: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +169,7 @@ a {
 }
 
 .gamePlay {
-    position: fixed;
+    position: absolute;
     width: 10em;
     height: 3em;
     background-color: rgb(0, 197, 95);
@@ -165,10 +178,17 @@ a {
     justify-content: center;
     align-items: center;
     margin-left: 8.5em;
-    margin-top: 11em;
-    transition: 0.3s;
-    z-index: 2;
-    opacity: 0;
+    margin-top: 16em;
+    transition: 0.01s;
+    cursor: pointer;
+}
+
+.gamePlay:hover {
+    background-color: rgb(0, 161, 78);
+}
+
+.gamePlay:active {
+    transform: scale(0.99);
 }
 
 .gamePlaySVG {

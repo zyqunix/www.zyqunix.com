@@ -1,0 +1,30 @@
+.game {
+    width: 60em;
+    margin: 0 auto;
+    height: 35em;
+    position: fixed;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    margin-left: 50%;
+    margin-top: 7em;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.fscreenENTER, .fscreenEXIT {
+    color: white;
+    cursor: pointer;
+    width: 1.5em;
+    user-select: none;
+    position: fixed;
+    margin-left: 57.5em;
+    margin-top: 33em;
+}
+
+.fscreenENTER {
+    opacity: 1;
+}
+
+.fscreenEXIT {
+    opacity: 0;
+}
